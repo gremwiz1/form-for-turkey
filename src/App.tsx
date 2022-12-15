@@ -25,7 +25,7 @@ const App: FC = () => {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const onFinish = (values: any) => {
     console.log(values)
-    fetch('/api', { // тут нужно указать путь
+    fetch('https://30a9-178-234-177-62.ngrok.io/api/kp', { // тут нужно указать путь
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
