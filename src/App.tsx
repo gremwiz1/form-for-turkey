@@ -7,6 +7,7 @@ import {
   Select
 } from 'antd'
 import './App.css'
+import { handleResponse } from './utils/helpers'
 
 const App: FC = () => {
   const [form] = Form.useForm()
@@ -21,8 +22,21 @@ const App: FC = () => {
       email: '${label} is not a valid email!'
     }
   }
-  const onFinish = (values: any): void => {
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const onFinish = (values: any) => {
     console.log(values)
+    fetch('/api', { // тут нужно указать путь
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        ...values
+      })
+    })
+      .then(async (res) => await handleResponse(res))
+      .then((res) => console.log('Ok'))
+      .catch((e) => console.log(e))
   }
   const fill = 'black'
   const windowWidth = window.innerWidth
