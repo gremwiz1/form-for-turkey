@@ -27,7 +27,7 @@ const App: FC = () => {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const onFinish = (values: any) => {
     console.log(values)
-    fetch('https://5.63.159.126', {
+    fetch('https://kapayji.ru/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
