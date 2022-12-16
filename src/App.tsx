@@ -27,7 +27,7 @@ const App: FC = () => {
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const onFinish = (values: any) => {
     console.log(values)
-    fetch('https://impuls-domofon48.ru/api/eqr', {
+    fetch('https://5.63.159.126', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
