@@ -14,7 +14,7 @@ const App: FC = () => {
   const [form] = Form.useForm()
   const [isSend, setIsSend] = React.useState(false)
   const layout = {
-    labelCol: { span: 8 },
+    labelCol: { span: 6 },
     wrapperCol: { span: 14 }
   }
   const { TextArea } = Input
@@ -122,7 +122,7 @@ const App: FC = () => {
             <Form.Item
               wrapperCol={
                 windowWidth > 575
-                  ? { ...layout.wrapperCol, offset: 8 }
+                  ? { ...layout.wrapperCol, offset: 6 }
                   : undefined
               }
               style={{ textAlign: 'center' }}
